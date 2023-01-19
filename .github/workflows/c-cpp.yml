@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up GCC
+      uses: egor-tensin/setup-gcc@v1
+      with:
+        version: latest
+        platform: x64
+    - name: Build Image Parse
+      run: gcc -c src/image-parse/lib_image_parse.c -o bin/image-parse/lib_image_parse.o
+    - name: Build Image Write
+      run: gcc -c src/image-write/lib_image_write.c -o bin/image-write/lib_image_write.o
+    - name: Package Image Parse
+      run: ar rcs bin/image-parse/lib_image_parse.a bin/image-parse/lib_image_parse.o
+    - name: Package Image Write
+      run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
