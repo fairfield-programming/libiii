@@ -23,3 +23,5 @@ We love contributions to the project, but do ask that they be high quality and r
 ## API
 
 ### Architecture
+
+We separate libraries based on their usage. Doing this will hopefully prevent bloating as the number of features begin to increase in the specification as a whole.
