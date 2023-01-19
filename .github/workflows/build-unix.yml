@@ -2,36 +2,35 @@ name: Build Unix Libraries
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up GCC
-      uses: egor-tensin/setup-gcc@v1
-      with:
-        version: latest
-        platform: x64
-    - name: Build Image Parse
-      run: gcc -c src/image-parse/lib_image_parse.c -o bin/image-parse/lib_image_parse.o
-    - name: Build Image Write
-      run: gcc -c src/image-write/lib_image_write.c -o bin/image-write/lib_image_write.o
-    - name: Package Image Parse
-      run: ar rcs bin/image-parse/lib_image_parse.a bin/image-parse/lib_image_parse.o
-    - name: Package Image Write
-      run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
-    - name: Upload Compiled Binaries
-          run: |
-            git config --local user.email "github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "github-actions[bot]"
-            git commit -a -m "Uploaded Newly Compiled Libraries"
-        - name: Push changes
-          uses: ad-m/github-push-action@master
-          with:
-            force_with_lease: true
+      - uses: actions/checkout@v3
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          version: latest
+          platform: x64
+      - name: Build Image Parse
+        run: gcc -c src/image-parse/lib_image_parse.c -o bin/image-parse/lib_image_parse.o
+      - name: Build Image Write
+        run: gcc -c src/image-write/lib_image_write.c -o bin/image-write/lib_image_write.o
+      - name: Package Image Parse
+        run: ar rcs bin/image-parse/lib_image_parse.a bin/image-parse/lib_image_parse.o
+      - name: Package Image Write
+        run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
+      - name: Upload Compiled Binaries
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "Uploaded Newly Compiled Libraries"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          force_with_lease: true
