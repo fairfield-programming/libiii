@@ -8,6 +8,14 @@ Libiii is designed to be an embeddable library enabling the parsing, creation, a
 
 We encourage all apps to utilize the Roman Format as it can lead to lower file sizes, more efficient transmissions, video, 3D graphics, and other advanced features. Since the format itself is so complex and modular, we do encourage usage of this library, as it always stays up to date with the format.
 
+### Porting
+
+We love and encourage ports of this library over to other languages. To keep the ports high quality and up to date, please have them depend on this repository in some kind of way. On top of this, check if a library exists already before creating a new one– we want to prevent overcrowding in the Roman Format ecosystem.
+
+### Embedding
+
+This library can be compiled as a dynamic or static library depending on your preference. The files for the library are included in the releases section of this Github page.
+
 ## Contributing
 
 We love contributions to the project, but do ask that they be high quality and reflect our core principles of simplicity, speed, and maintainability. We have found that code with comments has a much higher chance of being integrated into the project. On top of this, the most performant code is usually using the simplest solution. So, we do ask that you avoid overly complex performance optimizations (though we do judge them on a case by case basis, so do ask).
