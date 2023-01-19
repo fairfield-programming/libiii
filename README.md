@@ -4,7 +4,7 @@ An embeddable library for the Interpolated Image Interchange format.
 
 ## Usage
 
-Libiii is designed to be an embeddable library enabling the parsing, creation, and rendering of Roman files (files using the interpolated image interchange format). This library is made to be simple to use and integrate into modern apps. Because of this, we designed the library to be very high-level. But, we still allow anyone to access the lower level functions.
+Libiii is designed to be an embeddable library enabling the parsing, creation, and rendering of Roman files (files using the [Interpolated Image Interchange Format](https://vault.fairfieldprogramming.org/standards/roman-format)). This library is made to be simple to use and integrate into modern apps. Because of this, we designed the library to be very high-level. But, we still allow anyone to access the lower level functions.
 
 We encourage all apps to utilize the Roman Format as it can lead to lower file sizes, more efficient transmissions, video, 3D graphics, and other advanced features. Since the format itself is so complex and modular, we do encourage usage of this library, as it always stays up to date with the format.
 
