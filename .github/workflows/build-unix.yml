@@ -27,8 +27,8 @@ jobs:
         run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
       - name: Upload Compiled Binaries
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "fairfieldprogramming@gmail.com"
+          git config --local user.name "fairfield-programming-bot"
           git commit -a -m "Uploaded Newly Compiled Libraries"
       - name: Push changes
         uses: ad-m/github-push-action@master
