@@ -1,0 +1,13 @@
+{
+    "name": "libiii",
+    "description": "An embeddable library for the Interpolated Image Interchange format.",
+    "template": "https://github.com/fairfield-programming/donovan-spacey",
+    "owner": {
+        "name": "The Fairfield Programming Association Inc.",
+        "website": "https://fairfieldprogramming.org",
+        "github": "fairfield-programming"
+    },
+    "langs": [
+        "C"
+    ]
+}
