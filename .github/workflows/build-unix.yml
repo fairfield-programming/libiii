@@ -27,6 +27,7 @@ jobs:
         run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
       - name: Upload Builds to Github Releases
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             src/image-parse/lib_image_parse.h
