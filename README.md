@@ -1,4 +1,4 @@
-# ![[libiii](https://github.com/fairfield-programming/libiii/raw/master/.github/banner.png)](https://github.com/fairfield-programming/libiii)
+# [![libiii](https://github.com/fairfield-programming/libiii/raw/master/.github/banner.png)](https://github.com/fairfield-programming/libiii)
 
 An embeddable library for the Interpolated Image Interchange format.
 
