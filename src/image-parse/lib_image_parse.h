@@ -32,7 +32,7 @@ struct RomanFile
  * @brief Check if a file head is a valid Interpolated Image Format head.
  * @param input An unsigned char array representing the data in the file.
  * @param size The length of the input array.
- * @return A boolean representing if a Roman file is valid (true), or not (false).
+ * @returns A boolean representing if a Roman file is valid (true), or not (false).
  *
  * To determine whether a head is a valid or not, you can pass an unsigned
  * char array (which represents the file's bytes). This function then compares
@@ -45,14 +45,37 @@ bool check_head(unsigned char input[], size_t);
 /**
  * @brief Check if a file head is a valid Interpolated Image Format head while
  * reading the version.
- *
  * @param version An unsigned char array representing the data in the file.
  * @param input An unsigned char array representing the data in the file.
  * @param size The length of the input array.
- * @return A boolean representing if a Roman file is valid (true), or not (false).
+ * @returns A boolean representing if a Roman file is valid (true), or not (false).
  *
  * TODO: Add long description to this method.
  */
 bool get_version(int *version, unsigned char input[], size_t size);
 
-double get_point_value(int index, int point_size, int value_offset, int value_size);
+/**
+ * @brief Get the maximum value that a binary number can have by inputting the
+ * number of digits.
+ * @param x The number of digits that your specified number has.
+ * @returns The maximum value that a binary number, x bits long, can be.
+ *
+ * This function finds the maximum value when given the binary digit count of a
+ * number. This allows us to make all values relative to zero and one, rather
+ * than being independent. This normalization makes it so that depth is the only
+ * significant parameter effected by bit count.
+ */
+int max_from_bit_count(int x);
+
+/**
+ * @brief Get a value from a point stored in a char buffer.
+ * @param body All of the points stored in the file via bit indexing.
+ * @param index The index of the current point.
+ * @param point_size The bit count of a point (sum of all channels).
+ * @param value_offset Relative to each point, the channel's bit offset from left.
+ * @param value_size The bit count of this channel.
+ * @returns A value between 0 and 1 representing the retrieved value.
+ *
+ * TODO: Write a long description for this function.
+ */
+double get_point_value(char *body, int index, int point_size, int value_offset, int value_size);
