@@ -6,7 +6,6 @@
  *
  */
 
-//
 //   _    _ _   _ _ _ _            __  __      _   _               _
 //  | |  | | | (_) (_) |          |  \/  |    | | | |             | |
 //  | |  | | |_ _| |_| |_ _   _   | \  / | ___| |_| |__   ___   __| |___
@@ -15,6 +14,19 @@
 //   \____/ \__|_|_|_|\__|\__, |  |_|  |_|\___|\__|_| |_|\___/ \__,_|___/
 //                         __/ |
 //                        |___/
+
+struct RomanFileHeader
+{
+    char *name;
+    char *value;
+};
+
+struct RomanFile
+{
+    int version;
+    struct RomanFileHeader *headers;
+    char *body;
+};
 
 /**
  * @brief Check if a file head is a valid Interpolated Image Format head.
@@ -42,3 +54,5 @@ bool check_head(unsigned char input[], size_t);
  * TODO: Add long description to this method.
  */
 bool get_version(int *version, unsigned char input[], size_t size);
+
+double get_point_value(int index, int point_size, int value_offset, int value_size);
