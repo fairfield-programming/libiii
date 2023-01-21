@@ -25,6 +25,13 @@ jobs:
         run: ar rcs bin/image-parse/lib_image_parse.a bin/image-parse/lib_image_parse.o
       - name: Package Image Write
         run: ar rcs bin/image-write/lib_image_write.a bin/image-write/lib_image_write.o
+      - name: Upload Builds to Github Releases
+        uses: actions/upload-artifact@v3
+        with:
+          name: Libiii Binaries
+          path: |
+            bin/**/*.a
+            bin/**/*.o
       - name: Upload Compiled Binaries
         run: |
           git config --local user.email "fairfieldprogramming@gmail.com"
