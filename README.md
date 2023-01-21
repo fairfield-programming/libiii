@@ -1,6 +1,11 @@
 # [![libiii](https://github.com/fairfield-programming/libiii/raw/master/.github/banner.png)](https://github.com/fairfield-programming/libiii)
 
-An embeddable library for the Interpolated Image Interchange format.
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/fairfield-programming/libiii/build-unix.yml)](https://github.com/fairfield-programming/libiii/actions)
+[![GitHub top language](https://img.shields.io/github/languages/top/fairfield-programming/libiii)](https://github.com/fairfield-programming/libiii/tree/master/src)
+[![Lines of code](https://img.shields.io/tokei/lines/github/fairfield-programming/libiii)](https://github.com/fairfield-programming/libiii/tree/master/src)
+[![GitHub release (latest by date)](https://img.shields.io/github/downloads/fairfield-programming/libiii/latest/total)](https://github.com/fairfield-programming/libiii/releases)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/fairfield-programming)](https://github.com/sponsors/fairfield-programming)
+[![GitHub issues](https://img.shields.io/github/issues/fairfield-programming/libiii)](https://github.com/fairfield-programming/libiii/issues)
 
 ## Usage
 
