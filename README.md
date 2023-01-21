@@ -24,9 +24,3 @@ This library can be compiled as a dynamic or static library depending on your pr
 ## Contributing
 
 We love contributions to the project, but do ask that they be high quality and reflect our core principles of simplicity, speed, and maintainability. We have found that code with comments has a much higher chance of being integrated into the project. On top of this, the most performant code is usually using the simplest solution. So, we do ask that you avoid overly complex performance optimizations (though we do judge them on a case by case basis, so do ask).
-
-## API
-
-### Architecture
-
-We separate libraries based on their usage. Doing this will hopefully prevent bloating as the number of features begin to increase in the specification as a whole.
