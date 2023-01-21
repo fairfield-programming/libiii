@@ -2,5 +2,5 @@
 
 void test(void)
 {
-    printf("Test successfully called.");
+    printf("Test successfully called");
 }
