@@ -79,3 +79,5 @@ int max_from_bit_count(int x);
  * TODO: Write a long description for this function.
  */
 double get_point_value(char *body, int index, int point_size, int value_offset, int value_size);
+
+bool process_file_chunk(char data[], size_t length, struct RomanFile *file, int *state);

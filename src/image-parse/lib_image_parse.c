@@ -125,3 +125,9 @@ double get_point_value(char *body, int index, int point_size, int value_offset, 
 
     return ((double)true_value) / ((double)max_value);
 }
+
+bool process_file_chunk(char data[], size_t length, struct RomanFile *file, int *state)
+{
+
+    return true;
+}
