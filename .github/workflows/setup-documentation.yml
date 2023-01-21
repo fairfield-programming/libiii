@@ -18,13 +18,10 @@ jobs:
           node-version: 16
       - name: Generate Docs with Donovan
         run: npx donovan 
-      - name: Create Documentation Branch
-        run: |
-          git config --local user.email "fairfieldprogramming@gmail.com"
-          git config --local user.name "fairfield-programming-bot"
-          git branch docs
-          git commit -a -m "Uploaded New Documentation"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          force_with_lease: true
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
