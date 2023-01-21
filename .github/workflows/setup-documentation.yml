@@ -22,8 +22,8 @@ jobs:
         run: |
           git config --local user.email "fairfieldprogramming@gmail.com"
           git config --local user.name "fairfield-programming-bot"
-          git commit -a -m "Uploaded New Documentation"
           git branch docs
+          git commit -a -m "Uploaded New Documentation"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
