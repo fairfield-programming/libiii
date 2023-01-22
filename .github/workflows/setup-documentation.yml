@@ -18,14 +18,13 @@ jobs:
           node-version: 16
       - name: Generate Docs with Donovan
         run: npx donovan 
-      - name: Pushes the Documentation to gh-pages
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          source-directory: 'public'
-          destination-github-username: 'fairfield-programming'
-          destination-repository-name: 'libiii'
-          user-email: fairfieldprogramming@gmail.com
-          target-branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
