@@ -17,13 +17,13 @@ jobs:
         with:
           node-version: 16
       - name: Generate Docs with Donovan
-        run: npx donovan 
+        run: npx donovan; sleep 5
       - name: Commit files
         run: |
           ls -a
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
+          git commit -a -m --allow-empty "Add changes"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
