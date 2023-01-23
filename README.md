@@ -24,3 +24,9 @@ This library can be compiled as a dynamic or static library depending on your pr
 ## Contributing
 
 We love contributions to the project, but do ask that they be high quality and reflect our core principles of simplicity, speed, and maintainability. We have found that code with comments has a much higher chance of being integrated into the project. On top of this, the most performant code is usually using the simplest solution. So, we do ask that you avoid overly complex performance optimizations (though we do judge them on a case by case basis, so do ask).
+
+## Documentation
+
+[Documentation Website](https://fairfield-programming.github.io/libiii)
+
+We host a documentation website so that everyone can have a full understanding of our API and its functionality. The website is generated at runtime using Donovan, a documentation tool created by us, the Fairfield Programming Association.
