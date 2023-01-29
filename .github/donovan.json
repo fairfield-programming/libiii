@@ -1,13 +1,58 @@
 {
     "name": "libiii",
-    "description": "An embeddable library for the Interpolated Image Interchange format.",
+    "description": "🎆 An embeddable library for the Interpolated Image Interchange format.",
     "template": "https://github.com/fairfield-programming/donovan-spacey",
     "owner": {
-        "name": "The Fairfield Programming Association Inc.",
-        "website": "https://fairfieldprogramming.org",
+        "name": "fairfield-programming",
+        "website": "https://github.com/fairfield-programming",
         "github": "fairfield-programming"
     },
-    "langs": [
-        "C"
-    ]
+    "sections": {
+        "usage": [
+            {
+                "type": "paragraph",
+                "text": "Libiii is designed to be an embeddable library enabling the parsing, creation, and rendering of Roman files (files using the [Interpolated Image Interchange Format](https://vault.fairfieldprogramming.org/standards/roman-format)). This library is made to be simple to use and integrate into modern apps. Because of this, we designed the library to be very high-level. But, we still allow anyone to access the lower level functions."
+            },
+            {
+                "type": "paragraph",
+                "text": "We encourage all apps to utilize the Roman Format as it can lead to lower file sizes, more efficient transmissions, video, 3D graphics, and other advanced features. Since the format itself is so complex and modular, we do encourage usage of this library, as it always stays up to date with the format."
+            },
+            {
+                "type": "heading",
+                "depth": 3,
+                "text": "Porting"
+            },
+            {
+                "type": "paragraph",
+                "text": "We love and encourage ports of this library over to other languages. To keep the ports high quality and up to date, please have them depend on this repository in some kind of way. On top of this, check if a library exists already before creating a new one– we want to prevent overcrowding in the Roman Format ecosystem."
+            },
+            {
+                "type": "heading",
+                "depth": 3,
+                "text": "Embedding"
+            },
+            {
+                "type": "paragraph",
+                "text": "This library can be compiled as a dynamic or static library depending on your preference. The files for the library are included in the releases section of this Github page."
+            }
+        ],
+        "contributing": [
+            {
+                "type": "paragraph",
+                "text": "We love contributions to the project, but do ask that they be high quality and reflect our core principles of simplicity, speed, and maintainability. We have found that code with comments has a much higher chance of being integrated into the project. On top of this, the most performant code is usually using the simplest solution. So, we do ask that you avoid overly complex performance optimizations (though we do judge them on a case by case basis, so do ask)."
+            }
+        ],
+        "documentation": [
+            {
+                "type": "paragraph",
+                "text": "[Documentation Website](https://fairfield-programming.github.io/libiii)"
+            },
+            {
+                "type": "paragraph",
+                "text": "We host a documentation website so that everyone can have a full understanding of our API and its functionality. The website is generated at runtime using Donovan, a documentation tool created by us, the Fairfield Programming Association."
+            }
+        ]
+    },
+    "langs": [],
+    "license": "Copyright 2022 William McGonagle and the Fairfield Programming Association\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
 }
